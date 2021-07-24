@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Event Bubbling/Trickling</title>
+    <style>
+        div {
+            min-width: 100px;
+            min-height: 100px;
+            padding: 30px;
+            border: 1px solid black;
+        }
+    </style>    
+    </head>
+    <body>
+        <div id="grandparent">
+            <div id="parent">
+                <div id="child">
+                    <button onclick="doSomething()">Clicked</button>
+                    <p>Event Bubbling is event propogation from child to parents whereas Event Capturing is event propogation from parent to child</p>
+                    <p>Event Bubbling can be handled via boolean passed to addeventListener</p>
+                    <p>Propogation can be stopped anywhere between using e.stopPropagation();</p>
+                </div>    
+            </div>
+        </div>       
+    </body>
+    <script src="EventBubblingTrickling.js"></script>        
+</html>    
